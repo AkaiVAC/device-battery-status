@@ -3,11 +3,16 @@
 	"version": "1.0.0",
 	"main": "index.js",
 	"license": "MIT",
-	"dependencies": {
-		"express": "^4.17.1"
+	"browserslist": [
+		"last 2 Chrome versions"
+	],
+	"scripts": {
+		"start": "parcel ./public/index.html --open"
 	},
+	"dependencies": {},
 	"devDependencies": {
-		"dotenv": "^8.2.0",
-		"nodemon": "^2.0.2"
+		"parcel-bundler": "^1.12.4",
+		"parcel-plugin-svelte": "^4.0.6",
+		"svelte": "^3.19.2"
 	}
 }
