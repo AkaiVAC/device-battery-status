@@ -10,17 +10,15 @@
 		"start": "parcel ./public/index.html --open",
 		"test": "jest"
 	},
-	"dependencies": {},
+	"dependencies": {
+		"chart.js": "^2.9.3"
+	},
 	"devDependencies": {
 		"@babel/core": "^7.8.7",
 		"@babel/preset-env": "^7.8.7",
-		"@testing-library/jest-dom": "^5.1.1",
-		"@testing-library/svelte": "^1.11.0",
-		"babel-jest": "^25.1.0",
 		"jest": "^25.1.0",
 		"parcel-bundler": "^1.12.4",
 		"parcel-plugin-svelte": "^4.0.6",
-		"svelte": "^3.19.2",
-		"svelte-jester": "^1.0.5"
+		"svelte": "^3.19.2"
 	}
 }

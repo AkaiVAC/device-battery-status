@@ -1,14 +1,17 @@
 <script>
+  import { fade, scale } from "svelte/transition";
   import { createEventDispatcher } from "svelte";
+  import { academyStatusColor, deviceStatusColor } from "../data/utils";
+
   export let title;
   export let listItems;
   export let NoItemsMessage;
   export let current = "";
+
   const dispatch = createEventDispatcher();
   const handleClick = e => {
-    // const clickedItemName = e.target.childNodes[0].childNodes[2].textContent.trim();
     dispatch("selected", {
-      target: e.target
+      current
     });
   };
 </script>
@@ -25,7 +28,7 @@
   }
 
   .panel-body {
-    max-height: 60vh;
+    max-height: 70vh;
     overflow-y: auto;
   }
 
@@ -33,11 +36,21 @@
     color: #f14668;
   }
 
+  .panel-block.has-no-items {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
   .panel-block {
-    padding: 1rem 2rem;
+    padding: 0.7rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
   }
 
   .panel-name {
@@ -48,7 +61,7 @@
 </style>
 
 <div class="column">
-  <div class="panel has-background-white">
+  <div class="panel has-background-white" in:scale out:fade>
     <div class="panel-heading has-background-white">
       <h2 class="title is-4">
         {title}
@@ -58,27 +71,39 @@
       </h2>
     </div>
     <div class="panel-body">
-      {#each listItems as item, i}
+      {#each listItems as { item, status }, i}
         <label
-          class="panel-block is-size-5 academy_{i}"
-          class:is-active={current === `item_${i}`}
-          class:has-background-warning={current === `item_${i}`}
+          class="panel-block is-size-6"
+          class:is-active={current === `${item}`}
+          class:has-background-warning={current === `${item}`}
           on:click={e => {
-            current = `item_${i}`;
+            current = `${item}`;
             handleClick(e);
           }}>
           <div class="panel-name">
-            <span class="panel-icon is-size-5">
+            <span class="panel-icon is-size-6">
               <i
                 class="fas {title === 'Academies' ? 'fa-university' : 'fa-tablet-alt'}"
                 aria-hidden="true" />
             </span>
             <p>{item}</p>
           </div>
-          <span class="tag is-danger is-dark is-medium">5</span>
+          {#if title === 'Academies'}
+            <span
+              class="tag {academyStatusColor(status)} has-text-black is-dark
+              is-medium">
+              Critical Devices: {status}
+            </span>
+          {:else}
+            <span
+              class="tag {deviceStatusColor(status)} has-text-black is-dark
+              is-medium">
+              Daily Average: {status}%
+            </span>
+          {/if}
         </label>
       {:else}
-        <label class="panel-block has-text-grey">
+        <label class="panel-block has-text-grey has-no-items">
           <p>{NoItemsMessage}</p>
         </label>
       {/each}
