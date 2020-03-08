@@ -2,3 +2,7 @@
 .cache
 dist
 .vscode
+firebase.json
+.firebaserc
+.firebase
+./public/404.html

@@ -44,6 +44,7 @@
     deviceData = getAllBatteryStatuses(data).allDeviceDetails.filter(
       item => item.deviceId === selectedDevice
     );
+    document.querySelector("body").classList.add("is-clipped");
     isDataViewOpen = true;
   };
 

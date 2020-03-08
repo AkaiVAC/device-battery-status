@@ -21,7 +21,6 @@
     );
 
     let colors = chartColors(deviceData[0].deviceId);
-    console.log(colors);
 
     data = {
       labels: BattreyTimeData,
@@ -59,6 +58,7 @@
   const dispatch = createEventDispatcher();
   const closeModal = e => {
     dispatch("modal-close");
+    document.querySelector("body").classList.remove("is-clipped");
   };
 </script>
 
@@ -71,30 +71,30 @@
 
   .modal-card-head {
     border-radius: 0;
+    flex-wrap: wrap;
   }
 
   .modal-card-body {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    grid-template: 1fr /2fr 1fr;
+    place-items: center;
     height: 100vh;
+    z-index: 1;
   }
 
   .canvas-container {
-    max-width: 70%;
-    max-height: 100%;
-    width: 100%;
+    min-width: 100%;
   }
 
   .battery-stats {
-    max-height: 100%;
+    padding: 1rem;
     overflow-y: auto;
-    width: 30%;
+    width: 100%;
+    max-height: 100%;
   }
 
   .panel-block {
-    padding: 0.5rem 2rem;
+    padding: 0.5rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -105,6 +105,13 @@
     display: flex;
     align-items: center;
     pointer-events: none;
+  }
+
+  @media screen and (max-width: 800px) {
+    .modal-card-body {
+      grid-template: 1fr / 1fr;
+      place-items: center;
+    }
   }
 </style>
 
