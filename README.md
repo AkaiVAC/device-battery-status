@@ -52,7 +52,7 @@ The app uses the following dependencies for running and testing:
 -   Babel transpiler
 -   Jest testing framework
 
-### File Structure
+### Project Structure
 
 ```
 project
