@@ -5,13 +5,12 @@
   import Panel from "./components/Panel.svelte";
   import Modal from "./components/Modal.svelte";
   import DataView from "./components/DataView.svelte";
+  import Help from "./components/Help.svelte";
 
   import getAcademyStatuses from "./data/all_academy_statuses";
   import getDeviceStatus from "./data/device_status";
   import getAllBatteryStatuses from "./data/all_device_statuses";
   import data from "./api/data";
-
-  import Help from "./api/Help.svelte";
 
   // Get all academy data with status.
   let allAcademyData = getAcademyStatuses(data);
