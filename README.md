@@ -110,6 +110,8 @@ A few assumptions were made during the development process:
 -   The application has been structured assuming future enhancements with minimal breaking changes needed.
 -   The project assumes atleast the last 2 versions of Chrome running as set in the _package.json_ file.
 -   The employee data was ignored as it was not important for calculation as stated in the document.
+-   Duplicate data points were skipped.
+-   The _timestamp_ data point was trimmed down to minute range.
 
 ## Scope Reduction and Further Development
 
