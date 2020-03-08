@@ -1,5 +1,4 @@
 <script>
-  import { fade, scale } from "svelte/transition";
   import { createEventDispatcher } from "svelte";
   import { academyStatusColor, deviceStatusColor } from "../data/utils";
 
@@ -61,7 +60,7 @@
 </style>
 
 <div class="column">
-  <div class="panel has-background-white" in:scale out:fade>
+  <div class="panel has-background-white">
     <div class="panel-heading has-background-white">
       <h2 class="title is-4">
         {title}

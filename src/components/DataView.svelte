@@ -1,6 +1,5 @@
 <script>
   import { onMount } from "svelte";
-  import { fade, scale } from "svelte/transition";
   import { createEventDispatcher } from "svelte";
 
   import Chart from "chart.js";
@@ -111,7 +110,7 @@
 
 <div class="modal" class:is-active={isModalOpen}>
   <div class="modal-background" />
-  <div class="modal-card" in:scale out:fade>
+  <div class="modal-card">
     <header class="modal-card-head has-background-white">
       <p class="modal-card-title">
         Device
