@@ -83,7 +83,8 @@
   }
 
   .canvas-container {
-    min-width: 100%;
+    min-width: 95%;
+    max-width: 95%;
   }
 
   .battery-stats {
@@ -133,7 +134,7 @@
       <div class="box has-background-white canvas-container">
         <canvas id="canvas" />
       </div>
-      <div class="battery-stats">
+      <div class="box battery-stats">
         {#if deviceData[0]}
           {#each deviceData[0].details as detail}
             <label class="panel-block is-size-6">
