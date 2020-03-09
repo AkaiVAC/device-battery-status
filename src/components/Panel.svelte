@@ -102,7 +102,7 @@
           {/if}
         </label>
       {:else}
-        <label class="panel-block has-text-grey has-no-items">
+        <label class="panel-block has-text-dark-grey has-no-items">
           <p>{NoItemsMessage}</p>
         </label>
       {/each}

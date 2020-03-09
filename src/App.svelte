@@ -98,6 +98,7 @@
 <button
   class="button is-warning helpButton"
   data-target="modal"
+  aria-label="Help Button"
   on:click={() => {
     isHelpOpen = !isHelpOpen;
   }}
