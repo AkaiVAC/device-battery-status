@@ -15,11 +15,11 @@
 		"chart.js": "^2.9.3"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.8.7",
-		"@babel/preset-env": "^7.8.7",
-		"jest": "^25.1.0",
-		"parcel-bundler": "^1.12.4",
-		"parcel-plugin-svelte": "^4.0.6",
-		"svelte": "^3.19.2"
+		"@babel/core": "7.8.7",
+		"@babel/preset-env": "7.8.7",
+		"jest": "25.1.0",
+		"parcel-bundler": "1.12.4",
+		"parcel-plugin-svelte": "4.0.6",
+		"svelte": "3.19.2"
 	}
 }
