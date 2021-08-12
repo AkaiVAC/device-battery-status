@@ -5178,10 +5178,10 @@ parcel-bundler@1.12.4:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
-parcel-plugin-svelte@4.0.6:
-  version "4.0.6"
-  resolved "https://registry.yarnpkg.com/parcel-plugin-svelte/-/parcel-plugin-svelte-4.0.6.tgz#65f3e9cbfb44f5b6db9e6c70c9cc54891297f4b1"
-  integrity sha512-DMeu71qTrcLpSRhgGqAm1Seq+PBw+Aq0BuS2GIYwg8j2WIGo65oB4yRpPgcRQ0OVS1UUOiv8u64+AgiFzCpyOA==
+parcel-plugin-svelte@4.0.9:
+  version "4.0.9"
+  resolved "https://registry.yarnpkg.com/parcel-plugin-svelte/-/parcel-plugin-svelte-4.0.9.tgz#115225d86bcea74021722d270e1532d86698f333"
+  integrity sha512-ZMAvd3FS/J+4apTJTZhrQ3gl/37sVSBgMPgjzPuWcIhzvk69zFiUa0vSv8heyGSPVCRwrzr/V3UQQX1uap2uwQ==
 
 parse-asn1@^5.0.0, parse-asn1@^5.1.5:
   version "5.1.6"
