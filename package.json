@@ -20,6 +20,6 @@
 		"jest": "27.0.1",
 		"parcel-bundler": "1.12.4",
 		"parcel-plugin-svelte": "4.0.9",
-		"svelte": "3.38.2"
+		"svelte": "3.44.2"
 	}
 }
