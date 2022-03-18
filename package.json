@@ -15,8 +15,8 @@
 		"chart.js": "^3.0.0"
 	},
 	"devDependencies": {
-		"@babel/core": "7.16.0",
-		"@babel/preset-env": "7.16.4",
+		"@babel/core": "7.17.8",
+		"@babel/preset-env": "7.16.11",
 		"jest": "27.4.4",
 		"parcel-bundler": "1.12.4",
 		"parcel-plugin-svelte": "4.0.9",
