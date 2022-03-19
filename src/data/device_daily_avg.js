@@ -4,12 +4,12 @@ const getDeviceDailyAvg = (deviceId, batteryStats, data) => {
 	let batteryLevelOvertime = 0;
 	let totalTimeElapsed = 0;
 
-	let deviceDailyAvg = { deviceId: deviceId, value: "", academyId: "" };
+	let deviceDailyAvg = { deviceId: deviceId, value: '', academyId: '' };
 	batteryStats.forEach((item, index) => {
 		const nextItem = batteryStats[index + 1];
 		if (
 			index < batteryStats.length - 1 &&
-			typeof nextItem !== "undefined" &&
+			typeof nextItem !== 'undefined' &&
 			!isNaN(item.batteryLevel) &&
 			item.batteryLevel > nextItem.batteryLevel &&
 			item.timestamp !== nextItem.timestamp
@@ -21,7 +21,7 @@ const getDeviceDailyAvg = (deviceId, batteryStats, data) => {
 	});
 
 	deviceDailyAvg.academyId = data.filter(
-		item => item.serialNumber == deviceId
+		(item) => item.serialNumber == deviceId,
 	)[0].academyId;
 	deviceDailyAvg.value = (24 / totalTimeElapsed) * batteryLevelOvertime;
 

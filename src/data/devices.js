@@ -1,7 +1,7 @@
 const getDevices = (academyId, data) => {
 	if (!academyId || !data) return false;
-	let academyDevices = { academyId: "", devices: [] };
-	data.filter(item => {
+	let academyDevices = { academyId: '', devices: [] };
+	data.filter((item) => {
 		if (
 			item.academyId === Number(academyId) &&
 			!academyDevices.devices.includes(item.serialNumber) &&

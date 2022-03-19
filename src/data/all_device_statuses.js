@@ -1,25 +1,25 @@
-import getAcademyDetails from "./academy_details";
-import getDevices from "./devices";
-import getDeviceDetails from "./device_details";
-import getDeviceDailyAvg from "./device_daily_avg";
-import data from "../api/data";
+import getAcademyDetails from './academy_details';
+import getDevices from './devices';
+import getDeviceDetails from './device_details';
+import getDeviceDailyAvg from './device_daily_avg';
+import data from '../api/data';
 
-export const getAllAcademies = data => {
+export const getAllAcademies = (data) => {
 	return getAcademyDetails(data);
 };
 
-export const getAllDevices = allAcademies => {
+export const getAllDevices = (allAcademies) => {
 	const allDevices = [];
-	allAcademies.forEach(academy => {
+	allAcademies.forEach((academy) => {
 		allDevices.push(getDevices(academy, data));
 	});
 	return allDevices;
 };
 
-export const getAllDeviceDetails = allDevices => {
+export const getAllDeviceDetails = (allDevices) => {
 	const allDeviceDetails = [];
-	allDevices.forEach(device => {
-		device.devices.forEach(item => {
+	allDevices.forEach((device) => {
+		device.devices.forEach((item) => {
 			allDeviceDetails.push(getDeviceDetails(item, data));
 		});
 	});
@@ -28,15 +28,15 @@ export const getAllDeviceDetails = allDevices => {
 
 export const getAllDeviceStatuses = (allDeviceDetails, data) => {
 	const allDeviceStatuses = [];
-	allDeviceDetails.forEach(device => {
+	allDeviceDetails.forEach((device) => {
 		allDeviceStatuses.push(
-			getDeviceDailyAvg(device.deviceId, device.details, data)
+			getDeviceDailyAvg(device.deviceId, device.details, data),
 		);
 	});
 	return allDeviceStatuses;
 };
 
-const getAllBatteryStatuses = data => {
+const getAllBatteryStatuses = (data) => {
 	if (!data) return false;
 	const allAcademies = getAllAcademies(data);
 	const allDevices = getAllDevices(allAcademies);

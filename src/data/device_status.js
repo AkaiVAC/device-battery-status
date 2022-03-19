@@ -1,14 +1,14 @@
-import getAllBatteryStatuses from "./all_device_statuses";
+import getAllBatteryStatuses from './all_device_statuses';
 
 const getDeviceStatus = (academyId, data) => {
 	if (!academyId || !data) return false;
 	const allData = getAllBatteryStatuses(data);
 	const deviceStatus = [];
-	allData.allDeviceStatuses.map(device => {
+	allData.allDeviceStatuses.map((device) => {
 		if (device.academyId == academyId) {
 			deviceStatus.push({
 				item: device.deviceId,
-				status: device.value.toFixed(2)
+				status: device.value.toFixed(2),
 			});
 		}
 	});

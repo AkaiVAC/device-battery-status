@@ -1,19 +1,19 @@
-import getAllBatteryStatuses from "./all_device_statuses";
+import getAllBatteryStatuses from './all_device_statuses';
 
-const getAcademyStatuses = data => {
+const getAcademyStatuses = (data) => {
 	if (!data) return false;
 	const allData = getAllBatteryStatuses(data);
 	const academyStatus = [];
-	allData.allAcademies.forEach(academy => {
+	allData.allAcademies.forEach((academy) => {
 		let criticalCount = 0;
-		allData.allDeviceStatuses.map(status => {
+		allData.allDeviceStatuses.map((status) => {
 			if (status.academyId === academy && status.value > 30) {
 				criticalCount++;
 			}
 		});
 		academyStatus.push({
 			item: academy,
-			status: criticalCount
+			status: criticalCount,
 		});
 	});
 
