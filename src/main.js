@@ -1,5 +1,5 @@
-import App from "./App.svelte";
+import App from './App.svelte';
 
-const app = new App({ target: document.querySelector("#app") });
+const app = new App({ target: document.querySelector('#app') });
 
 export default app;
