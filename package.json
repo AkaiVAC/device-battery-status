@@ -1,19 +1,19 @@
 {
 	"name": "battery-test",
 	"version": "1.0.0",
-	"main": "index.js",
 	"license": "MIT",
 	"browserslist": [
 		"last 2 Chrome versions"
 	],
 	"scripts": {
 		"start": "parcel ./public/index.html --open",
-		"build": "parcel build ./public/index.html --experimental-scope-hoisting --no-source-maps",
+		"build": "parcel build ./public/index.html --no-source-maps",
 		"test": "jest",
 		"format": "prettier --write --plugin-search-dir=. ./**/*.svelte"
 	},
 	"dependencies": {
-		"chart.js": "^3.7.1"
+		"chart.js": "^3.7.1",
+		"svelte": "^3.46.4"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.8",
@@ -28,8 +28,7 @@
 		"parcel": "^2.3.2",
 		"parcel-transformer-svelte": "^1.2.3",
 		"prettier": "^2.6.0",
-		"prettier-plugin-svelte": "^2.6.0",
-		"svelte": "^3.46.4"
+		"prettier-plugin-svelte": "^2.6.0"
 	},
 	"peerDependencies": {
 		"@parcel/core": "^2.3.2"
