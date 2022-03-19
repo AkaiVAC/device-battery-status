@@ -1,5 +1,5 @@
 {
-	"name": "battery-test",
+	"name": "device-battery-status",
 	"version": "1.0.0",
 	"license": "MIT",
 	"browserslist": [

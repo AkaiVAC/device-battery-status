@@ -135,5 +135,3 @@ The following features were excluded due to their scope and time constraints:
 4. Better responsiveness.
 5. Better code optimization.
 6. Further optimize the usage of external dependencies in the app.
-
-**Thank you for the Opportunity!**
