@@ -9,17 +9,29 @@
 	"scripts": {
 		"start": "parcel ./public/index.html --open",
 		"build": "parcel build ./public/index.html --experimental-scope-hoisting --no-source-maps",
-		"test": "jest"
+		"test": "jest",
+		"format": "prettier --write --plugin-search-dir=. ./**/*.svelte"
 	},
 	"dependencies": {
-		"chart.js": "^3.0.0"
+		"chart.js": "^3.7.1"
 	},
 	"devDependencies": {
-		"@babel/core": "7.16.0",
-		"@babel/preset-env": "7.16.4",
-		"jest": "27.4.4",
-		"parcel-bundler": "1.12.4",
-		"parcel-plugin-svelte": "4.0.9",
-		"svelte": "3.44.2"
+		"@babel/core": "^7.17.8",
+		"@babel/preset-env": "^7.16.11",
+		"@parcel/config-default": "^2.3.2",
+		"@parcel/core": "^2.3.2",
+		"@parcel/packager-raw-url": "2.3.2",
+		"@parcel/transformer-js": "^2.3.2",
+		"@parcel/transformer-react-refresh-wrap": "^2.3.2",
+		"@parcel/transformer-webmanifest": "2.3.2",
+		"jest": "^27.5.1",
+		"parcel": "^2.3.2",
+		"parcel-transformer-svelte": "^1.2.3",
+		"prettier": "^2.6.0",
+		"prettier-plugin-svelte": "^2.6.0",
+		"svelte": "^3.46.4"
+	},
+	"peerDependencies": {
+		"@parcel/core": "^2.3.2"
 	}
 }
