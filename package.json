@@ -24,7 +24,7 @@
 		"@parcel/transformer-js": "^2.3.2",
 		"@parcel/transformer-react-refresh-wrap": "^2.3.2",
 		"@parcel/transformer-webmanifest": "2.5.0",
-		"jest": "^27.5.1",
+		"jest": "28.0.2",
 		"parcel": "^2.3.2",
 		"parcel-transformer-svelte": "^1.2.3",
 		"prettier": "^2.6.0",
