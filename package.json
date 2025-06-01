@@ -12,23 +12,23 @@
 		"format": "prettier --write --plugin-search-dir=. ./**/*.svelte"
 	},
 	"dependencies": {
-		"chart.js": "^3.7.1",
-		"svelte": "^3.46.4"
+		"chart.js": "3.9.1",
+		"svelte": "3.50.1"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.17.8",
-		"@babel/preset-env": "^7.16.11",
-		"@parcel/config-default": "^2.3.2",
-		"@parcel/core": "^2.3.2",
-		"@parcel/packager-raw-url": "2.7.0",
-		"@parcel/transformer-js": "^2.3.2",
-		"@parcel/transformer-react-refresh-wrap": "^2.3.2",
-		"@parcel/transformer-webmanifest": "2.7.0",
+		"@babel/core": "7.19.1",
+		"@babel/preset-env": "7.19.1",
+		"@parcel/config-default": "2.7.0",
+		"@parcel/core": "2.7.0",
+		"@parcel/packager-raw-url": "2.5.0",
+		"@parcel/transformer-js": "2.7.0",
+		"@parcel/transformer-react-refresh-wrap": "2.7.0",
+		"@parcel/transformer-webmanifest": "2.5.0",
 		"jest": "28.0.2",
-		"parcel": "^2.3.2",
-		"parcel-transformer-svelte": "^1.2.3",
-		"prettier": "^2.6.0",
-		"prettier-plugin-svelte": "^2.6.0"
+		"parcel": "2.7.0",
+		"parcel-transformer-svelte": "1.2.3",
+		"prettier": "2.7.1",
+		"prettier-plugin-svelte": "2.7.0"
 	},
 	"peerDependencies": {
 		"@parcel/core": "^2.3.2"
