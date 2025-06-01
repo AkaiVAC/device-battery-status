@@ -8,7 +8,7 @@ specifiers:
   '@parcel/transformer-js': ^2.3.2
   '@parcel/transformer-webmanifest': ^2.8.3
   chart.js: ^3.7.1
-  jest: 28.0.2
+  jest: 28.1.3
   parcel: ^2.3.2
   parcel-transformer-svelte: ^1.2.3
   prettier: ^2.6.0
@@ -20,17 +20,19 @@ dependencies:
   svelte: 3.55.1
 
 devDependencies:
-  '@babel/core': 7.20.12
-  '@babel/preset-env': 7.20.2_@babel+core@7.20.12
-  '@parcel/config-default': 2.8.3
-  '@parcel/packager-raw-url': 2.8.3
-  '@parcel/transformer-js': 2.8.3
-  '@parcel/transformer-webmanifest': 2.8.3
-  jest: 28.0.2
-  parcel: 2.8.3
-  parcel-transformer-svelte: 1.2.3_svelte@3.55.1
-  prettier: 2.8.3
-  prettier-plugin-svelte: 2.9.0_kdmmghgdi3ngrsq6otxkjilbry
+  '@babel/core': 7.19.1
+  '@babel/preset-env': 7.19.1_@babel+core@7.19.1
+  '@parcel/config-default': 2.7.0_@parcel+core@2.7.0
+  '@parcel/core': 2.7.0
+  '@parcel/packager-raw-url': 2.5.0_@parcel+core@2.7.0
+  '@parcel/transformer-js': 2.7.0_@parcel+core@2.7.0
+  '@parcel/transformer-react-refresh-wrap': 2.7.0_@parcel+core@2.7.0
+  '@parcel/transformer-webmanifest': 2.5.0_@parcel+core@2.7.0
+  jest: 28.1.3
+  parcel: 2.7.0
+  parcel-transformer-svelte: 1.2.3_jgcwc5vamr3iiiunzdlty3fb74
+  prettier: 2.7.1
+  prettier-plugin-svelte: 2.7.0_nk6d2fkgcllkkdynqbuearcure
 
 packages:
 
@@ -3793,8 +3795,8 @@ packages:
       supports-color: 8.1.1
     dev: true
 
-  /jest/28.0.2:
-    resolution: {integrity: sha512-COUtjybolW4koQvO7kCfq5kgbeeU5WbSJfVZprz4zbS8AL32+RAZZTUjBEyRRdpsXqss/pHIvSL7/P+LyMYHXg==}
+  /jest/28.1.3:
+    resolution: {integrity: sha512-N4GT5on8UkZgH0O5LUavMRV1EDEhNTL0KEfRmDIeZHSV7p2XgLoY9t9VDUgL6o+yfdgYHVxuz81G8oB9VG5uyA==}
     engines: {node: ^12.13.0 || ^14.15.0 || ^16.10.0 || >=17.0.0}
     hasBin: true
     peerDependencies:
@@ -3804,6 +3806,7 @@ packages:
         optional: true
     dependencies:
       '@jest/core': 28.1.3
+      '@jest/types': 28.1.3
       import-local: 3.1.0
       jest-cli: 28.1.3
     transitivePeerDependencies:
